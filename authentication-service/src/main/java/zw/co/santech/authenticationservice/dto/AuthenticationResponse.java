@@ -13,5 +13,6 @@ import java.io.Serializable;
 @Builder
 public class AuthenticationResponse implements Serializable {
     private String token;
+    private String message;
     private Object accessTicket;
 }

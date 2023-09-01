@@ -30,6 +30,7 @@ public class AuthenticationManagerService {
 
         return AuthenticationResponse.builder()
                 .token(token)
+                .message("Authentication successful")
                 .build();
     }
 }
