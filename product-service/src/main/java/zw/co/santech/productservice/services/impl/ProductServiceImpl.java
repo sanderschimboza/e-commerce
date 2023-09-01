@@ -145,7 +145,7 @@ public class ProductServiceImpl implements ProductService {
     public void ModifyProductQuantity(String productId, int newQuantity, String userId) {
         if (newQuantity < 0) {
             throw new ProductServiceCustomException(
-                    "Come on! Quantity of less than Zero is unacceptable!",
+                    "Come on! Quantity of less than zero is unacceptable!",
                     Constants.CODE_INVALID_QUANTITY
             );
         }
