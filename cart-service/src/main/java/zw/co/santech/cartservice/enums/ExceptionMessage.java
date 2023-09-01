@@ -1,0 +1,15 @@
+package zw.co.santech.cartservice.enums;
+
+public enum ExceptionMessage {
+    PRODUCT_ALREADY_ADDED_IN_CART,
+    EMPTY_CHECKOUT,
+    INVALID_QUANTITY,
+    PRODUCT_UNAVAILABLE,
+    CART_NOT_FOUND,
+    INVALID_USER,
+    UNAUTHORIZED,
+    SERVICE_UNAVAILABLE,
+    RUNTIME_ERROR,
+    BAD_REQUEST,
+    NOT_FOUND
+}

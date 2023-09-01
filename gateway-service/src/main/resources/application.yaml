@@ -1,0 +1,30 @@
+jwt:
+  secret: 5A7134743777217A25432A462D4A404E635266556A586E3272357538782F413F
+
+server:
+  port: 3000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+spring:
+  application:
+    name: gateway-service
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      shared:
+        #register-health-indicator: true
+        sliding-window-type: COUNT_BASED
+        sliding-window-size: 5
+        failure-rate-threshold: 60
+        wait-duration-in-open-state: 5s
+        #slow-call-rate-threshold: 40
+        permitted-number-of-calls-in-half-open-state: 1
+        #slow-call-duration-threshold: 2s
+        #writable-stack-trace-enabled: true
+        automatic-transition-from-open-to-half-open-enabled: true
+    instances:
+      gatewayCb:
+        base-config: shared
